@@ -1,0 +1,41 @@
+# .NET / MAUI
+bin/
+obj/
+*.user
+.vs/
+.idea/
+*.suo
+*.userprefs
+
+# NuGet
+*.nupkg
+**/packages/
+!**/packages/repositories.config
+project.lock.json
+project.assets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Android
+*.apk
+*.aab
+*.keystore
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini

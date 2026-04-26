@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Safhear.MainPage"
+             BackgroundColor="#1A1A2E">
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto"
+          Padding="20,50,20,30">
+
+        <!-- Baslik -->
+        <VerticalStackLayout Grid.Row="0" Spacing="5" Margin="0,0,0,20">
+            <Label Text="Safhear"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="#E94560"
+                   HorizontalOptions="Center" />
+            <Label Text="Sesli konusmalari aninda metne cevir"
+                   FontSize="13"
+                   TextColor="#888899"
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <!-- Cevrilen metnin gosterildigi alan -->
+        <Border Grid.Row="1"
+                BackgroundColor="#16213E"
+                StrokeThickness="1.5"
+                Margin="0,0,0,15">
+            <Border.Stroke>
+                <SolidColorBrush Color="#0F3460" />
+            </Border.Stroke>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="16" />
+            </Border.StrokeShape>
+            <ScrollView Padding="20,15">
+                <Label x:Name="MetinLabel"
+                       Text="Dinlemeye baslamak icin asagidaki butona basin..."
+                       FontSize="26"
+                       TextColor="#AAAACC"
+                       HorizontalOptions="Fill"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap" />
+            </ScrollView>
+        </Border>
+
+        <!-- Durum bilgisi -->
+        <VerticalStackLayout Grid.Row="2" Spacing="5" Margin="0,0,0,15">
+            <Label x:Name="KayitGostergesi"
+                   Text="KAYIT YAPILIYOR"
+                   TextColor="#E94560"
+                   FontSize="13"
+                   FontAttributes="Bold"
+                   IsVisible="False"
+                   HorizontalOptions="Center" />
+            <Label x:Name="DurumLabel"
+                   Text="Hazir"
+                   FontSize="13"
+                   TextColor="#888899"
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <!-- Butonlar -->
+        <Grid Grid.Row="3" ColumnDefinitions="*,80" ColumnSpacing="12">
+            <Button x:Name="DinleButon"
+                    Grid.Column="0"
+                    Text="Dinlemeye Basla"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    BackgroundColor="#E94560"
+                    TextColor="White"
+                    CornerRadius="30"
+                    HeightRequest="60"
+                    Clicked="DinleButon_Clicked" />
+            <Button x:Name="TemizleButon"
+                    Grid.Column="1"
+                    Text="Sil"
+                    FontSize="14"
+                    BackgroundColor="#0F3460"
+                    TextColor="White"
+                    CornerRadius="30"
+                    HeightRequest="60"
+                    Clicked="TemizleButon_Clicked" />
+        </Grid>
+
+    </Grid>
+</ContentPage>
